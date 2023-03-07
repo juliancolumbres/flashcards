@@ -1,0 +1,13 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(157, 157, 157, 0.2);
+    transition: 0.3s;
+    background-color: #292929;
+    width: 30em;
+    height: 5em;
+    color: #FDB927;
+    font-size: larger;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
