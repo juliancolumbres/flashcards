@@ -25,6 +25,15 @@
   gap: 1em;
 }
 
+.correct {
+  border-color: green;
+}
+
+
+.incorrect {
+  border-color: red;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

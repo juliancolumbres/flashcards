@@ -15,15 +15,43 @@ for (const fact of facts) {
 
 const App = () => {
 
-  console.log(flashcards);
   const [flashcardIndex, setFlashcardIndex] = useState(0);
+  const [cardIsFlipped, setCardIsFlipped] = useState(false);
+  const [guess, setGuess] = useState("");
+  const [guessIsCorrect, setGuessIsCorrect] = useState(false);
+  const [hasGuessed, setHasGuessed] = useState(true);
+  
+  const firstCardIsShown = flashcardIndex == 0; 
+
+  const inputClass = hasGuessed ? (guessIsCorrect ? "correct" : "incorrect") : {}; 
 
   const handleNextClick = () => {
     setFlashcardIndex(flashcardIndex + 1);
+    setGuess("");
+    setHasGuessed(false);
   }
 
   const handlePrevClick = () => {
     setFlashcardIndex(flashcardIndex - 1);
+    setGuess("");
+    setHasGuessed(false);
+  }
+
+  const handleFlip = () => {
+    setCardIsFlipped(!cardIsFlipped);
+    console.log("flipped");
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setHasGuessed(true);
+    if (guess === flashcards[flashcardIndex].answer) {
+      setGuessIsCorrect(true);
+    }
+    else {
+      setGuessIsCorrect(false);
+    }
+    console.log(inputClass);
   }
 
   return (
@@ -37,8 +65,15 @@ const App = () => {
         <Flashcard 
           question={flashcards[flashcardIndex].question} 
           answer={flashcards[flashcardIndex].answer}
-          isFlipped={false}
+          onFlip={handleFlip}
         />
+        <div className="guess-container" hidden={cardIsFlipped || firstCardIsShown}>
+          <form onSubmit={handleSubmit}>
+            <label>Guess </label>
+            <input className={inputClass} type="text" value={guess} onChange={(e) => setGuess(e.target.value)}></input>
+            <button>Submit</button>
+          </form>
+        </div>
         <div className="button-grouping">
           <button className="backButton" onClick={handlePrevClick} disabled={flashcardIndex == 0}>Prev</button>
           <button className="nextButton" onClick={handleNextClick} disabled={flashcardIndex == flashcards.length - 1}>Next</button>

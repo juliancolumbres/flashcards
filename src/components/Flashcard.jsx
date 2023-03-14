@@ -6,6 +6,7 @@ const Flashcard = (props) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const handleClick = () => {
         setIsFlipped(!isFlipped);
+        props.onFlip();
     }
 
     return (
