@@ -1,26 +1,26 @@
-# Web Development Project 2 - *NBA Flashcards*
+# Web Development Project 3 - *NBA Flashcards (Part 2)*
 
 Submitted by: **Julian Columbres**
 
 This web app: **A flashcard app to test NBA Knowledge!**
 
-Time spent: **2** hours spent in total
+Time spent: **1** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [X] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [X] **A list of card pairs is created**
-- [X] **Clicking on the card shows the corresponding component of the information pair**
-- [X] **Clicking the next button displays a random new card**
+- [X] **The user can enter their guess in a box before seeing the flipside of the card**
+- [X] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [X] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [ ] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -28,12 +28,12 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-![Kapture 2023-03-06 at 21 04 24](https://user-images.githubusercontent.com/75638994/223325950-7a42cb97-f43e-45bf-b7aa-4c62a387ce60.gif)
+![nba-flashcards-part2](https://user-images.githubusercontent.com/75638994/224892318-0b2326a1-b2bf-4a79-9f82-afac0246cd6d.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with Kap  
+GIF created with Kap 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
